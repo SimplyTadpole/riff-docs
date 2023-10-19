@@ -1,0 +1,6 @@
+site_name: Riff.CC Documentation
+site_url: https://example.com/
+nav:
+  - Home: index.md
+  - Orbiter: orbiter-index.md
+  - CeramicRiff: ceramicriff-index.md
