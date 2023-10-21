@@ -1,5 +1,5 @@
 site_name: Riff.CC Documentation
-site_url: https://example.com/
+site_url: http://riff.cc/riff-docs/
 nav:
   - Home: index.md
   - Orbiter: orbiter-index.md
