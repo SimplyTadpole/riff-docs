@@ -28,9 +28,9 @@ There are two different platforms Riff.CC can be hosted on - **Orbiter**, which 
 Refer to the below shortcuts on relevant pages for instructions:
 
 * Installation
-    - [Install using Orbiter](https://github.com/riffcc/orbiter)
-    - [Install using CeramicRiff](https://github.com/riffcc/ceramic-riff-web)
-* Running and Maintaining
+    - [Install using Orbiter](https://riff.cc/riff-docs/orbiter-index/)
+    - [Install using CeramicRiff](https://riff.cc/riff-docs/ceramicriff-index/)
+* Running and Maintaining (TBD)
 
 ## Credits
 Authored by [@Zorlin](https://github.com/Zorlin), [@julienmalard](https://github.com/julienmalard), [@en0c-026](https://github.com/en0c-026), [@SimplyTadpole](https://github.com/SimplyTadpole) and the Riff.CC Project.
