@@ -1,6 +1,6 @@
 # Riff.CC on Ceramic (ComposeDB)
 
-[Riff on Ceramic](https://github.com/riffcc/ceramic-riff-web) (also referred to as CeramicRiff) is a proof-of-concept version of Riff.CC, implemented using Ceramic and ComposeDB. It is one of the two current platforms for hosting Riff.CC instances, the other being [Orbiter](https://github.com/riffcc/orbiter). This page contains instructions on how to set up and install a Riff.CC instance through CeramicRiff.
+[Riff on Ceramic](https://github.com/riffcc/riff.cc-vue) (also referred to as CeramicRiff) is a proof-of-concept version of Riff.CC, implemented using Ceramic and ComposeDB. It is one of the two current platforms for hosting Riff.CC instances, the other being [Orbiter](https://github.com/riffcc/orbiter). This page contains instructions on how to set up and install a Riff.CC instance through CeramicRiff.
 
 ## Getting Started
 
@@ -8,10 +8,10 @@ CeramicRiff will work on any standard Linux distribution where standard utilitie
 
 ### Dependencies
 
-You must make sure the `git` command is installed. If not, run the following command as root:
+You must make sure the `git` command is installed. If not, you need to install it:
 
 ```sh
-apt install git
+sudo apt install git
 ```
 
 Additionally, CeramicRiff utilizes **Node.JS** and **yarn** to set up and install the platform, and as such it's required to install them as well. We suggest using the [NodeSource installation guide](https://github.com/nodesource/distributions#installation-instructions), with $NODE_MAJOR set to 20:
@@ -51,21 +51,24 @@ npm install -g yarn
 * **1.)** Clone CeramicRiff's GitHub repository:
 
 ```bash
-git clone https://github.com/riffcc/ceramic-riff-web.git
+git clone https://github.com/riffcc/riff.cc-vue.git
 ```
 
 * **2.)** Move into CeramicRiff's directory and set up its installation packages:
 ```bash
-cd ceramic-riff-web
+cd riff.cc-vue
 yarn install
 ```
 
-* **3.)** Rename .env.local.example to env.local, and fill in its variables:
+* **3.)** Rename .env.local.example to env.local, and fill in its variables. We strongly recommend using our node and the new admin server:
+
+- `VITE_NODE_URL`=https://ftwc.xyz/ceramic
+- `VITE_ADMIN_SERVER`=https://ftwc.xyz/api/admin
+
 ```bash
-NEXT_PUBLIC_NODE_URL=<YOUR_NODE_URL> # If you run an own local node <http://localhost:7007> , or an external node <http://<SERVER_PUBLIC_IP>:7007>
-NEXT_PUBLIC_ADMIN_SERVER=<YOUR_ADMIN_SERVER_URL> # Run admin server in riffcc/ceramic-node repository via yarn run admin:server
-NEXT_PUBLIC_WEBSITE_ID=<TEST_WEBSITE_ID> # Generated in riffcc/ceramic-node repository via yarn run generate:website
-NEXT_PUBLIC_IPFS_GATEWAY=<YOUR_INFURA_IPFS_GATEWAY> # Ex. my-gateway.infura-ipfs.io
+VITE_NODE_URL=<YOUR_NODE_URL> # If you run a own local node <http://localhost:7007> , or an external node <http://<SERVER_PUBLIC_IP>:7007>
+VITE_ADMIN_SERVER=<YOUR_ADMIN_SERVER_URL> # Run admin server in riffcc/eramic-node repository via yarn run admin:server
+VITE_WEBSITE_ID=<TEST_WEBSITE_ID> # Generated in riffcc/eramic-node repository via yarn run generate:website
 ```
 
 * **4.)** Run [ceramic-node](https://github.com/riffcc/ceramic-node) so CeramicRiff can properly communicate with it.
