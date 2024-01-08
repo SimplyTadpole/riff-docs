@@ -41,7 +41,7 @@ sudo apt-get install nodejs -y
 
 * **4.)** Install Yarn once Node.JS is installed:
 ```sh
-npm install -g yarn
+sudo npm install -g yarn
 ```
 
 * **5.)** Set up and configure [ceramic-node](https://github.com/riffcc/ceramic-node). CeramicRiff requires it to be configured and running in order to function - Ceramic-Node's location is not important, as it runs as a service on the local machine, which CeramicRiff communicates with.
